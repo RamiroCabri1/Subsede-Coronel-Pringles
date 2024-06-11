@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="../css/v5.css">
+    <link rel="hoja de estilo" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="hoja de estilo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="hoja de estilo">
+    <link rel="icon" type="image/png" sizes="16x16" href="../redes/favicon-16x16.png">
+    <title>Subsede Coronel Pringles</title>
+</head>
+<body>
+    
+    <!------------------------Header------------------------->
+    <header class="header">
+        
+        <!------------------------Boton Navegador------------------------->
+        <div class="realnav-wrapper">
+            
+                <!------------------------ Navegador------------------------->
+                <nav class="realnav">
+                    
+                    <input type="checkbox" id="menu-toggle" class="hidden-checkbox">  
+                    <label for="menu-toggle" class="menu-icon"> <i class="fas fa-bars"></i></label>
+                       
+                    <ul class="li-wrapper" role="menubar">
+                            
+                        <li role="menuitem">
+                            
+                            <a href="v5.html"  >Inicio</a>
+                            
+                        </li>
+                        
+                        <li role="menuitem">
+                            
+                            <a href="v9.html" >Ingresos</a>
+                        </li>
+                    
+                    
+                        <li role="menuitem">
+                            
+                            <a href="v3.html" >Carreras</a>
+                            
+                                <ul role="menu" >
+                                    <li role="menuitem" class="inner-menu_li">
+                                        
+                                            <a href="v3-carrera1.html">Tecnicatura Universitaria en Producción Agropecuaria Sostenible</a>
+
+                                    
+                                        
+                                    <li role="menuitem" class="inner-menu_li" id="try">
+                                        
+                                        <a href="v3-carrera2.html">Programador</a>
+                                    
+                                    </li>
+                                </ul>
+                            
+                            
+                        </li>
+                   
+                    
+                        <li role="menuitem">
+                            <a href="v8.html">La Ciudad</a>
+                        </li>
+                    
+                    
+                        <li role="menuitem">
+                            <a href="v7.html">Horarios</a>
+                        </li>
+                    
+                   
+                        <li role="menuitem">
+                            <a href="v6.html">La Universidad</a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="v12.html">Contacto</a>
+                        </li>
+                    
+                      
+                    
+                    </ul>
+                        
+                </nav>
+                <!------------------------Fin Navegador------------------------->
+        </div>
+       <!------------------------Fin Boton Navegador------------------------->
+       
+       <!------------------------ Boton Buscador-------------------------> 
+       <div class="search">
+            <i class="fas fa-search" ></i>
+        </div>
+        <div class="search-container">
+            <label for="search-input"></label>
+            <input type="text" id="search-input" class="search-input" placeholder="Escriba su búsqueda..." name="search">
+            <button type="button" class="close-btn">Cerrar</button>
+        </div>
+        <!------------------------Fin Boton Buscador-------------------------> 
+        
+        
+    </header>
+    <!------------------------Fin Header------------------------->
+    
+    <!------------------------ Lineas decorativas -------------------------> 
+    <div class="soft-line_small"></div>
+    
+    <div class="soft-line header-line" ></div>
+    <!------------------------Fin Lineas decorativas -------------------------> 
+    
+    <!------------------------ Cuerpo Principal -------------------------> 
+    <div class="page-container">
+           
+        <!------------------------Cabecera (sin ser header) Cuerpo Principal -------------------------> 
+        <div class="container-title" >
+            <h2  >Formulario de Inscripcion
+                
+            </h2 >
+           
+        </div>
+        
+        <div class="container-img container-img_formulario" >
+            
+            
+        </div>
+        <!------------------------FIn Cabecera (sin ser header) Cuerpo Principal -------------------------> 
+        
+        <!------------------------Linea decorativa -------------------------> 
+        <div class="soft-line" style="width: 75%;">
+
+        </div>   
+        <!------------------------Fin Linea decorativa ------------------------->  
+
+        <!------------------------Main cuerpo principal, igual a todas las paginas pero con la clase no-overflow -------------------------> 
+        <main class="page-container_main no-overflow" >
+            
+          
+
+
+            <!------------------------Div contenedor del form y del area de texto. En este div se encuentran el form ( dentro de el un div con los botones ) y 2 divs mas. El div de la clase backgound-img actua de fondo,  el formulario y el div text-form estan absolute con un z index mayor asi quedan sobre la imagen-------------------------> 
+            <div class="page-container_main-articule form-row">
+                
+                
+                <!------------------------Formulario  ------------------------->
+                <form class="page-container_main-articule-form" onsubmit="return validarFormulario(event)">
+                    <label for="in-nombre"> Nombre: </label>
+                    <div class="soft-line"></div>
+                    <input type="text" id="in-nombre" name="in-nombre" required aria-required="true" >
+                
+                    <label for="in-apellido"> Apellido: </label>
+                    <div class="soft-line"></div>
+                    <input type="text" id="in-apellido" name="in-nombre" required aria-required="true" >
+                
+                    <label for="in-dni"> DNI: </label>
+                    <div class="soft-line"></div>
+                    <input type="number" id="in-dni" name="in-dni" required aria-required="true"  maxlength="8" minlength="7">
+                
+                    <label for="in-email"> Email: </label>
+                    <div class="soft-line"></div>
+                    <input type="email" id="in-email" name="in-email" required aria-required="true" >
+                
+                    <button type="submit" value="Submit"> Enviar </button>
+                    <button type="reset" value="Reset"> Borrar </button>
+                    <button type="button" value="button" id="abrir-consulta">Abrir Consulta</button>
+                
+                    <div id="my-alert">Error en el formulario</div>
+                </form>
+                <!------------------------Fin Formulario  ------------------------->
+
+                <!------------------------TextArea y botones  ------------------------->
+                <div id="modal">
+                    
+                    <label for="consulta-textarea"><p>Consultas:</p></label>
+                    <textarea id="consulta-textarea" name="consulta-textarea" rows="5" cols="30" placeholder="Escriba su consulta aquí.." style="font-style: italic;"></textarea>
+                    <button id="enviar-consulta" type="button" >Enviar</button>
+                    <button id="cerrar-consulta" type="button" >Cerrar</button>
+                
+                </div>
+                <!------------------------Fin TextArea y botones  ------------------------->
+               
+                <!------------------------ Div con la imagen de fondo ------------------------->
+                <div class="backgound-img">
+                    <figure>
+                        <img src="../redes/ingrerso.jpg" alt="foto de inscripcion" id="backgound-img">
+                    </figure>
+                    
+                </div>
+                <!------------------------Fin Div con la imagen de fondo ------------------------->
+                
+                <!------------------------Div con texto paralelo al formulario, desaparecer a un determinado width ------------------------->
+                <div class="form-text">
+                    
+                    <h3 id="h3-form"><strong>Completa el Formulario y nos contactamos !!</strong></h3>
+                    <div class="soft-line"></div>
+                    
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias voluptatibus cumque eum eligendi quia quidem, autem a. Qui, delectus nam voluptates perferendis accusamus aperiam, corporis, cupiditate exercitationem repudiandae minima esse?</p>
+                </div>
+                <!------------------------Fin Div con texto paralelo al formulario ------------------------->
+            
+            </div>
+            <!------------------------Fin Div contenedor del form ------------------------->
+        </main>
+        <!------------------------Fin Main cuerpo principal ------------------------->
+        
+
+       
+    </div>
+    <!------------------------Fin Cuerpo Principal -------------------------> 
+    
+    <!------------------------ Lineas decorativas -------------------------> 
+    <div class="soft-line_small"></div>
+    <div class="soft-line header-line"></div>
+    <!------------------------FIn Lineas decorativas -------------------------> 
+    
+    <!------------------------Footer -------------------------> 
+    <footer class="footer">
+            
+        <!------------------------Seccion redes en Footer ------------------------->     
+        <section class="redes"> 
+            
+            <div class="redes-logos">
+                <article class="net">
+                    <figure>
+                        <a href="https://www.facebook.com/upsouniversidad">
+                        <img src="../redes/neoface.png"  alt="Facebook" title="move to Facebook" ></a>
+                    </figure>   
+                </article>
+                
+                <article class="net">
+                    <figure>
+                        <a href="https://www.instagram.com/upsouniversidad/">
+                        <img src="../redes/traced-neoinsta.png"  alt="Instagram" title="move to Instagram" ></a>
+                    </figure>
+                </article>
+                
+                <article class="net">
+                    <figure>
+                        <a href="https://twitter.com/upsouniversidad">
+                        <img src="../redes/traced-7-78730_white-twitter-logo-png-twitter-icon-png.png"  alt="X" title="move to X" ></a>
+                    </figure>
+                </article>
+               
+                <article class="net">
+                    <figure>
+                        <a href="https://www.youtube.com/@universidadprovincialdelsu3409">
+                        <img src="../redes/youtubegordo-fotor-bg-remover-20240428213131.png"  alt="Youtube" title="move to Youtube" ></a>
+                    </figure>
+                </article>
+                
+                <article class="net">
+                    <figure>
+                        <a href="https://www.linkedin.com/company/universidad-provincial-del-sudoeste/">
+                        <img src="../redes/creoestasi.png.png"  alt="Linkedin" title="move to Linkedin" ></a>
+                    </figure>        
+                </article>
+            </div>
+                     
+        
+        </section>
+        <!------------------------Fin Seccion redes en Footer -------------------------> 
+        
+        <!------------------------Seccion Addres -------------------------> 
+        <section class="section-address">
+            <address class="address">
+                <p class="archivo-black-regular">
+                  Universidad Provincial del Sudoeste. Provincia de Buenos Aires. Argentina<br>
+                  Sede central: San Martín 415, Pigüé - Telefax: (02923) 475693 - <a href="mailto:pigue@upso.gba.gob.ar">pigue@upso.gba.gob.ar</a><br>
+                  Sede Administrativa: Ciudad de Cali 320 (B8003FTH) Bahía Blanca<br>
+                  Tel: (0291) 4592550 - Fax: (0291) 4592551<br>
+                  WhatsApp: <a href="https://wa.me/542916456060">+542916456060</a><br> &#9993
+                  Correo: <a href="mailto:info@upso.edu.ar">  info@upso.edu.ar</a>
+                </p>
+              </address>
+        </section>
+        <!------------------------Fin Seccion Addres ------------------------->
+
+    </footer>
+    <!------------------------Fin Footer -------------------------> 
+   
+
+  
+</body>
+<script src="../upso.js/v5.js" defer></script>
+</html>

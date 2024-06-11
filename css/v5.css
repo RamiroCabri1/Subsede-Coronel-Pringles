@@ -1,0 +1,1171 @@
+@import 'variables.css';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.soft-line{
+
+    max-width: 1400px;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(130, 0, 36, 0.5);
+
+}
+
+.header-line {
+
+    max-width: none;
+
+}
+
+.soft-line_small {
+
+    width: 100%;
+    height: 3px;
+    background-color: #111;
+
+}
+
+
+
+/*---------------------------------------------------Header-----------------------------------------------*/
+
+
+.header {
+    
+    height: 20vh;
+    width: 100%;
+    background-image: url(../redes/upso5.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+/*-------------------------------------------- Menu Navegador y buscador----------------------------------------------------- */
+
+.realnav-wrapper{
+    
+    top:0;
+    position: absolute;
+    z-index: 10;
+
+}
+
+.realnav {
+    
+   
+    align-items: center;
+    position: fixed;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    border-radius: 0px 0px 15px 0px;
+    z-index: 25464;
+}
+
+.hidden-checkbox {
+    
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+}
+
+.menu-icon {
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fafafa;
+    font-size: 40px; 
+    width: 100%; 
+    height: 100%; 
+    cursor: pointer;
+    z-index: 250465; 
+
+}
+
+.menu-icon i {
+    
+    pointer-events: none; 
+
+}
+
+ul {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+li a {
+    
+    display: block;
+    color: #fafafa;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1000000;
+
+}
+
+li:hover {
+
+    text-decoration: underline;
+    color: #ccc;
+
+}
+
+.realnav input:checked ~ ul li {
+    
+    display: block;
+
+}
+
+.li-wrapper{
+    
+    
+    width: 100vw;
+    display: none;
+    background-color: var(--upso-color);
+    
+}
+
+.li-wrapper li {
+    
+    
+    padding: 3vw;
+    min-height: 100px;
+   
+}
+
+.realnav input:checked ~ .li-wrapper {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    position: fixed;
+    box-shadow: 0px 10px 10px 0px black;
+
+}
+
+@media screen and (max-width: 1050px) {
+
+
+    .li-wrapper li {
+
+        margin-top: 4em;
+        margin-bottom: 1em;
+        
+        
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+    .li-wrapper li {
+
+        margin-top: 5em;
+        margin-bottom: 2em;
+        
+        
+    }
+
+
+}
+
+
+
+
+
+
+
+
+.realnav input:checked ~ .menu-icon {
+    
+    background-color:white;
+    border-radius: 0px 0px 15px 0px;
+    color: black;
+    border: 1px solid black;
+    
+}
+
+/*----------------Menu de carreras ---------------------*/
+
+.realnav ul ul {
+    
+    display: none; 
+    position: absolute; 
+    background: linear-gradient(#111,var(--upso-color));
+    left: 0;
+    width: auto; 
+    z-index: 100000;
+    border-radius: 15px;
+    white-space: nowrap; 
+}
+
+
+.realnav ul li:hover > ul {
+    
+    display: block; 
+    border: 1px solid #fafafa;
+
+}
+
+
+
+.realnav ul ul li:first-child {
+    
+    margin-top: 9vh;
+
+}
+
+/*--el id Try mereamente de prueba, no se continua su desarrollo porque la subsede no tiene mas carreras, solo sirve para probar el diseño---*/
+
+#try{
+
+
+    padding-top: 1vh;
+}
+
+.inner-menu_li :hover {
+
+    text-decoration: underline;
+    
+}
+.realnav ul li {
+    position: relative; 
+}
+
+@media screen  and (max-width: 675px){
+
+    .realnav ul ul {
+        white-space: wrap; 
+    }
+    
+}
+
+
+/*----------------Fin Menu de carreras ---------------------*/
+
+/*----------------------------Boton buscador--------------------------------------*/
+
+.search {
+    
+    margin-top: 0;
+    box-sizing: border-box;
+    background-color: #111;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right:  0;
+    width: 70px;
+    height: 70px;
+    border-radius: 0px 0px 0px 15px;
+    font-size: x-large;
+    z-index: 10999;
+    cursor: pointer;
+    color: #fff;
+
+}
+
+.search-container {
+    
+    
+    
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    top: 0.5em;
+    right:  7em;
+    padding:  20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    z-index: 1000;
+    max-height: 78px;
+    padding-bottom: 100px;
+}
+
+.search-input {
+    
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+
+
+.close-btn {
+    
+    font-family: "Roboto",Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    background-color: var(--upso-color);
+    border: none;
+    padding:10px ;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%; 
+    font-size: 1rem;
+}
+
+.search-container ::placeholder {
+
+    color: #a52d2d; 
+    font-style: italic;
+    font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/*----------------------------------------------- Menu Navegador y buscador-------------------------------------------------------------- */
+/*-------------------------------------------------- Fin de Header ----------------------------------------------------------------------*/
+
+/*############################################## Page-Container ( se repite en todas las paginas, con exepcion de la pagina de inicio ) ##########################################################################################################################################################################################################################################################################*/
+
+
+
+.page-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(var(--upso-blue), #e4e1e1de);
+   
+}
+
+.container-title {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 1400px;
+    background-color: rgba(130, 0, 36, 0.5);
+    margin-top: 5%;
+    width: 75%;
+    min-height: 10vh;
+    
+    
+}
+  
+.container-title h2  {
+    
+    color: white;
+    font-size: 1.5em;
+    font-family: "Questrial", sans-serif;
+    font-weight: 624;
+}
+
+
+.container-title h2::before {
+
+    content: "Subsede Coronel Pringles   >   ";
+
+}
+
+
+@media screen and (max-width: 400px){
+
+    .container-title h2  {
+   
+    
+        font-size: 0.8 em;
+        
+    }
+
+    
+}
+
+.container-img {
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1400px;
+    height: 100%;
+    opacity: 0.8;
+    height: 20vh;
+    width: 75%;
+    
+}
+
+
+/*-------Imagenes para los container-img------------*/ 
+
+.container-img_carreras {
+
+    background-image: url(../redes/header-carreras.png);
+}
+
+.container-img_la-universidad {
+
+    background-image: url(../redes/sedecentralUPSO.png);
+
+}
+
+.container-img_la-ciudad {
+
+    background-image: url(../redes/plaza-coronel-pringles.jpg);
+
+}
+
+.container-img_ingreso {
+
+    background-image: url(../redes/ingrerso.jpg);
+
+}
+
+.container-img_formulario {
+
+    background-image: url(../redes/inscripcion.jpg);
+
+}
+
+.container-img_horarios {
+
+    background-image: url(../redes/horario.jpg);
+
+}
+
+/*------- Fin Imagenes para los container-img------------*/ 
+
+/*--------------------------- Main y articule compartido con todas las paginas menos el inicio-------------------------------------*/
+
+.page-container_main {
+    
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    max-width: 1400px;
+    width: 75%;
+    box-sizing: border-box;
+    background-image: linear-gradient(var(--upso-blue), #6d5f5fde);
+    overflow: hidden;
+    overflow-x: auto;
+
+}
+
+.page-container_main-articule {
+    
+    box-sizing: border-box;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+/*---------------Pagina de Fomulario de contacto----------------------------*/
+
+
+.page-container_main {
+    
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    max-width: 1400px;
+    width: 75%;
+    box-sizing: border-box;
+    background-image: linear-gradient(var(--upso-blue), #6d5f5fde);
+    overflow: hidden;
+    overflow-x: auto;
+
+}
+
+.page-container_main-articule {
+    
+    box-sizing: border-box;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+/*---------------------Estilos para el formulario de ingreso -------------------------------------*/
+.no-overflow{
+    
+    position: relative;
+    overflow: hidden; /*clase esperical para evitar que se exeda del container */
+    
+}
+
+.form-row {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.page-container_main-articule-form {
+
+
+    width: auto;
+}
+
+
+
+#backgound-img {
+
+    width: 100%;
+    opacity: 0.2;
+}
+
+.form-text {
+
+    position: absolute;
+    z-index: 2;
+    right: 4vw;
+    width: 50%;
+}
+
+#h3-form {
+    font-size: 3em;
+    font-family: "Roboto",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1em;
+    color: var(--upso-orange);
+}
+@media screen and (max-width: 1000px){
+
+   
+    #h3-form{
+    
+        padding: 1em;
+        font-size: 2em;
+    }
+    .form-text > p {
+
+        margin-top: 2px;
+    }
+   
+    
+}
+
+
+
+
+.page-container_main-articule > form {
+    
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 2;
+    top: 4vw;
+    left: 4vw;
+}
+
+.page-container_main-articule > form > label {
+    
+    font-family: "roboto",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fafafa;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.page-container_main-articule-form label::after {
+    content: "*";
+    color: #ff0000;
+}
+
+/*------------------------Textbox---------------------------------------*/
+
+#modal {
+    
+    font-family: "Roboto",'Times New Roman', Times, serif;    
+    gap: 10px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(var(--upso-blue), #6d5f5fde);
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 25;
+}
+
+#modal p{
+
+    color: var(--upso-orange);
+    margin: 10px 0px 10px 0px ;
+}
+
+
+
+
+/*------------------Fin textbox-----------------------------------*/
+
+
+
+.page-container_main-articule-form > button{
+    
+    padding: 3%;
+    width: 100%;
+    color: #fafafa;
+    background-color: var(--upso-color);
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    font-family: "Roboto",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 15px;
+    
+  
+}
+
+.page-container_main-articule-form > button:hover {
+
+    box-shadow: 2px 2px 1px 0px var(--upso-color);
+
+}
+
+
+
+
+@media screen and (max-width: 1150px){
+
+   
+    .form-button-wrapper > button{
+    
+        padding: 1%;
+        
+    }
+    .page-container_main-articule > form > label {
+    
+        font-size: smaller;
+        margin-top: 0.1vw;
+        margin-bottom: 0.1vw;
+    }
+   
+    
+}
+
+@media screen and (max-width: 724px){
+
+    
+    
+    .form-text {
+
+      display: none;
+    
+    }
+    /*De la forma que diseñe esta seccion al no estar como imagen de fondo en el contenedor del form y esta de fondo en un div debo hacer un display none, si no fuer asi quizas podria dejarlo de fondo*/
+    .backgound-img {
+        
+        display: none;
+        
+    }
+    .page-container_main-articule > form {
+        
+        position: inherit;
+       
+    }
+    .form-row {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+    .page-container_main {
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+        max-width: 1400px;
+        width: 75%;
+        box-sizing: border-box;
+        background-image: linear-gradient(var(--upso-blue), #6d5f5fde);
+        overflow: hidden;
+        overflow-x: auto;
+    }
+    .page-container_main-articule h2{
+        
+        padding: 1em;
+        font-size: 3em;
+    
+    }
+    
+}
+   
+
+
+
+/*----------------Fin Pagina de Fomulario de contacto----------------------------*/
+/*---Fin de estilos para el formulario de ingreso ----*/
+
+/*-------- Fin Main y articule compartido con todas las paginas ---------------*/
+
+/*-------- h4, p, h2  ul y li. Algunas paginas tendra algunos diseños por separados, estaran en este sector  --------*/
+
+.page-container_main-articule  h2{
+
+    font-family: "Roboto",Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2em 0 2em 0;
+    color: var(--upso-orange);
+    font-size: 3em;
+
+
+
+}
+
+.page-container_main-articule  h2  {
+    
+    font-family: "Roboto",Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5em;
+    color: #fafafa;
+    padding: 2em 0 2em 0;
+    
+    
+}
+
+@media screen and (max-width: 450px) {
+
+    .page-container_main-articule  h2{
+            
+        font-size: 1em;
+    
+    }
+}
+
+.page-container_main-articule p {
+    
+    
+    font-family: "Roboto",Tahoma, Geneva, Verdana, sans-serif;
+    color: #fafafa;
+    margin: 2em 0;
+    font-size: 1em;
+    line-height: 1.6;
+    
+}
+
+/*--Util para la pagina ingresos---*/
+
+.atention-parragraf h3, h4{
+
+    color: var(--upso-orange);
+    padding: 2em 2em 2em 0;
+    font-family: "Roboto",Georgia, 'Times New Roman', Times, serif;
+}  
+
+.atention-parragraf h3 {
+
+    font-size: 3em;
+
+}
+
+.atention-parragraf h4 {
+
+    font-size: 2em;
+
+}
+
+
+
+.atention-parragraf p:nth-of-type(1) {
+   
+    background-color: rgba(255, 25, 0, 0.3);
+    font-size: 2em;
+ 
+ }
+.atention-parragraf  p:nth-of-type(2) {
+    
+    background-color: rgba(255, 25, 0, 0.3);
+    font-size: 2.1em;
+    text-decoration: underline;
+ }
+
+#instructivo:hover {
+    color: var(--upso-blue);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.ingresos-ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style-type: disc;
+    padding-left: 2em;
+   
+  
+}
+
+li[role="listitem"] {
+    font-style: italic;
+}
+  
+.ingresos-ul-li{
+    
+    line-height: 1.5;
+    color: #fafafa;
+    font-size: 1.395em;
+    font-family: "Roboto",Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+
+}
+
+
+
+.figcaption {
+
+    color:  #fafafa;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-size: smaller;
+
+}
+
+/*--------Fin h4, p, h2  ul y li de la pagina de ingreso --------*/  
+
+
+
+/*-------------------- Pagina de carreras esta pagina tiene muchos detalles particulares y escapa el diseño de las otras-------------------------------------*/
+
+.carreras-articule {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+
+}
+
+
+
+@media screen and (min-width: 1400px) {
+    .oferta-wrapper {
+      max-width: 1400px;
+    }
+  }
+
+
+
+.oferta-wrapper_article {
+    
+    box-sizing: border-box;
+    position: relative;
+    width: 300px; 
+    margin: 20px;
+    flex-direction: column;
+    min-height: 500px;
+   
+}
+
+
+.oferta-wrapper_article img {
+    
+    position: relative;
+    object-fit: cover;
+    width: 100%; 
+    height: auto; 
+    z-index: 2;
+    
+}
+
+.oferta-wrapper_article:hover .something  {
+
+    display: block;
+
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .oferta-wrapper_article {
+        width: calc(50% - 20px); 
+    }
+
+  
+
+}
+
+@media screen and (max-width: 480px) {
+    .oferta-wrapper_article {
+        width: calc(75% - 20px); 
+    }
+}
+
+
+.h3-oferta{
+
+    font-size: 1em;
+    font-family: "Roboto",Tahoma, Geneva, Verdana, sans-serif;
+    line-height: normal;
+    color: #fafafa;
+    
+}
+
+.oferta-header {
+    
+    box-sizing: border-box;
+    margin-top: 25px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    
+    
+}
+
+/*---Esta clase es la informacion oculta, tuve dificultades para modificar el nombre de la clase por tal motivo la dejo de esta manera---*/
+
+.something {
+    
+    position: absolute;
+    top: 0;
+    display: none;
+    background: linear-gradient(#111,var(--upso-color));
+    box-shadow: 5px 5px #fafafa;
+    padding: 1em;
+    border-radius: 5px;
+    max-width: 345px;
+    max-height: 530px;
+    z-index: 4;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    
+}
+
+.something h3  {
+    
+    font-family: "Roboto",Tahoma, Geneva, Verdana, sans-serif;
+    margin: 3vh 2vh;
+    color:var(--upso-orange);
+    font-size: 1.5em;
+    
+}
+
+.something p {
+    
+    font-family:"Roboto",Tahoma, Geneva, Verdana, sans-serif;
+    margin: 4vh 1vh;
+    color:#fafafa;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+/*--------------------Fin Pagina de carreras---------------------------------------------------*/
+
+/*-------------------------------Tablas de la pagina Horarios ------------------------*/
+
+table {
+    
+    margin-bottom: 5vh;
+    border-collapse: collapse;
+    width: 100%;
+    font-family: "Roboto",Tahoma, Geneva, Verdana, sans-serif;
+    background-color:var(--upso-color);
+    color: #fafafa;
+
+}
+
+th, td {
+    
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: small;
+    
+}
+
+th {
+    
+    font-size: medium;
+    background-color:var(--upso-blue);
+}
+
+
+tr:nth-child(2){
+
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+tr:nth-child(4){
+
+    background-color:  rgba(0, 0, 0, 0.5)
+
+}
+
+
+
+
+
+/*-------------------------------Fin Tablas de la pagina Horarios ------------------------*/
+
+/*--------------------------------Util para la pagina de Ciudad y Universidad----------------------------------*/
+
+.city-wrapper_main-text-image img {
+
+        width:100%;
+
+}
+/*--------------------------------Util para la pagina de Ciudad y Universidad----------------------------------*/
+
+
+/*---------------------------------------------------------- Footer----------------------------------------------------------------- */
+
+
+
+.footer{
+   
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    border-top:2px solid black;
+    clear: left;
+    background-color: #e4e1e1de;
+    flex-wrap: wrap;
+    
+}
+
+.redes{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+
+}
+
+.redes .net img {
+    
+    filter: grayscale(100%); 
+    transition: filter 0.3s; 
+
+}
+
+.redes .net:hover img {
+    
+    filter: grayscale(0%);
+
+}
+
+.redes-logos{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.redes h2  {
+    
+    color: rgb(118, 115, 115); 
+
+}
+
+.net{
+    
+    height: 40px;
+    width: 4cap;
+    margin: 10px;
+
+}
+
+.redes article {
+
+    margin-left: 10px;
+
+}
+
+.net img{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.section-address{
+    
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 50px;
+    align-items: center;
+   
+}
+
+.section-address p{
+
+    font-size: 70%;
+
+}
+
+
+@media screen and (max-width :380px){
+
+    .redes-logos{
+
+        flex-direction: column;
+        height: 300px;
+    
+    }
+
+
+}
+
+@media screen and (max-width :200px){    
+
+    .archivo-black-regular {
+
+        display: none;
+    }
+
+}
+
+
+/*------------------ Fin de Footer------------------------------- */
+
+/*------------------ Alert------------------------------- */
+
+#my-alert {
+    
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 920999; 
+    background-color: #b44242;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+ 
+
+
+

@@ -1,0 +1,936 @@
+@import 'variables.css';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1, h2 {
+
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+h2 {
+
+    
+    font-size: 3vw;
+    color: #111;
+    text-align: center;
+    text-decoration: none;
+}
+
+h1 {
+    
+    margin-top: 10%;
+    font-size: 8vw;
+    color: #111;
+    text-align: center;
+
+}
+
+.section-title {
+    color: white;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.soft-line{
+
+    width: 100%;
+    height: 10px;
+    background-color: rgba(130, 0, 36, 0.5);
+
+}
+
+.soft-line_small {
+
+    width: 100%;
+    height: 3px;
+    background-color: #111;
+
+}
+
+
+
+/*---------------------------------------------------Header-----------------------------------------------*/
+
+
+.header {
+    
+    
+    display: flex;;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(../redes/upso14.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/*----boton MODE---*/
+
+
+  button[type="button"] {
+    
+    font-family: "Libre Barcode 128 Text";
+    padding: 0.5em;
+    opacity: 0.2;
+}
+
+
+
+/*----Fin boton MODE---*/
+
+.header-overlay{
+    top:0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(255, 25, 0, 0.3);
+    position: absolute;
+    
+}
+
+.header-item-container {
+    
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%; 
+    z-index: 2;
+
+}
+
+
+.header_logo {
+    
+    height: 200px;
+    width: 200px;
+    background-image: url(../redes/logoUpso-removebg-preview.png);
+    background-size: cover;
+
+}
+
+@media screen and (max-height:280px) {
+    
+    .header_logo{
+
+        height: 50px;
+        width: 50px;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .header {
+        height: 50vh; 
+    }
+
+    .header-logo {
+        
+        height: 100px;
+        
+        width: 100px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 350px){
+    p {
+        font-size: 2vw;
+    }
+    .header {
+        height: 50vh; 
+    }
+
+    .header-logo {
+        
+        height: 100px;
+        
+        width: 100px;
+    }
+   
+}
+
+@media screen and (min-width: 2800px){
+    /*me parece que queda mas interesante que si se agrande mucho la pantalla el overlay se va, pero bueno ver antes de enviar */
+    .header-overlay{
+    
+        display: none;
+       
+    }
+
+
+}
+    
+.header-item-container p{
+    
+    color:black;
+    margin-top: 1em;
+    letter-spacing: 0.5px; 
+    
+
+}
+
+/*--------------------------------- Menu Navegador y buscador------------------------------------------ */
+
+.realnav-wrapper{
+    
+    top:0;
+    position: absolute;
+    z-index: 10;
+
+}
+
+
+.realnav {
+    
+    top:0;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    border-radius: 0px 0px 15px 0px;
+    z-index: 25464;
+}
+
+.hidden-checkbox {
+    
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+}
+
+.menu-icon {
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fafafa;
+    font-size: 40px; 
+    width: 100%; 
+    height: 100%; 
+    cursor: pointer;
+    z-index: 250465; 
+
+}
+
+
+
+.menu-icon i {
+    
+    pointer-events: none; 
+
+}
+
+
+
+ul {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+li a {
+    
+    display: block;
+    color: #fafafa;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1000000;
+
+}
+li:hover {
+
+    text-decoration: underline;
+    color: #ccc;
+
+}
+
+
+
+
+.realnav input:checked ~ ul li {
+    
+    display: block;
+
+}
+
+.li-wrapper{
+    
+    
+    z-index: 100000;
+    width: 100vw;
+    display: none;
+    background-color: var(--upso-color);
+    
+}
+
+
+
+.li-wrapper li {
+    
+    padding: 3vw;
+    
+}
+
+
+
+.realnav input:checked ~ .li-wrapper {
+    
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 0;
+    
+    left: 0;
+    position: fixed;
+    box-shadow: 0px 10px 10px 0px black;
+    
+    
+}
+
+
+@media screen and (max-width: 1050px) {
+
+
+    .li-wrapper li {
+
+        margin-top: 4em;
+        margin-bottom: 1em;
+        
+        
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+    .li-wrapper li {
+
+        margin-top: 5em;
+        margin-bottom: 2em;
+        
+        
+    }
+
+
+}
+
+
+
+
+.realnav input:checked ~ .menu-icon {
+    
+    background-color:white;
+    border-radius: 0px 0px 15px 0px;
+    color: black;
+    border: 1px solid black;
+    
+}
+
+/*----------------Menu de carreras ---------------------*/
+.realnav ul ul {
+    
+    display: none; 
+    position: absolute; 
+    background: linear-gradient(#111,var(--upso-color));
+    left:0;
+    width: 700px;
+    z-index: 100000;
+    border-radius: 15px;
+
+    
+
+}
+
+.realnav ul li:hover > ul {
+    
+    display: block; 
+    border: 1px solid #fafafa;
+
+}
+
+
+
+.realnav ul ul li:first-child {
+    
+    margin-top: 9vh;
+
+}
+
+#try{
+
+
+    padding-top: 1vh;
+}
+
+.inner-menu_li :hover {
+
+    text-decoration: underline;
+    
+}
+.realnav ul li {
+    position: relative; 
+}
+
+
+
+/*----------------Fin Menu de carreras ---------------------*/
+
+
+
+
+
+/*----------------------------Boton buscador--------------------------------------*/
+
+
+
+
+
+.search {
+    
+    margin-top: 0;
+    box-sizing: border-box;
+    background-color: #111;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right:  0;
+    width: 70px;
+    height: 70px;
+    border-radius: 0px 0px 0px 15px;
+    font-size: x-large;
+    z-index: 999;
+    cursor: pointer;
+    color: #fff;
+
+}
+
+.search-container {
+    
+    
+    display: none;
+    position: fixed;
+    
+    top: 0.5em;
+    right:  7em;
+    padding:  20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    z-index: 1000;
+    max-height: 78px;
+    padding-bottom: 100px;
+
+}
+
+.search-input {
+    
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    
+    box-sizing: border-box;
+
+}
+
+
+.close-btn {
+    
+    font-family: "Roboto";
+    color: #fff;
+    background-color: var(--upso-color);
+    border: none;
+    padding:10px ;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; 
+    font-size: 1rem;
+}
+
+.search-container ::placeholder {
+
+    color: var(--upso-color);
+    font-style: italic;
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+/*--------------------Fin Pagina de carreras esta pagina tiene muchos detalles particulares y escapa el diseño de las otras----------------------- -----------------------------*/
+
+
+/*-----------------Clases de los articulos de la pagina de inicio -------------------------------------------------------------*/
+
+.main-container_wrapper{
+
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+
+}
+
+.main-container_wrapper-articule {
+    
+    position: relative; 
+    height: 300px;
+    width: 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #111;
+    border-right: 5px solid #111;
+
+}
+
+
+.main-container_wrapper-articule::before {
+    
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.6); 
+    z-index: 1; 
+    transition: opacity 0.5s ease; 
+    opacity: 0; 
+
+}
+
+.main-container_wrapper-articule:hover::before {
+    
+    opacity: 0.9; 
+    
+}
+
+
+
+#la-universidad:hover {
+
+    background-image: url(../redes/sedecentralUPSO.png);
+    background-position: center;
+
+}
+
+#la-universidad{
+
+    width: 100vw;
+
+
+}
+
+#ingresos:hover {
+
+    background-image: url(../redes/ingrerso.jpg);
+    background-position: center;
+}
+
+#ingresos {
+
+    width: 65vw;
+    background-color: #111;
+
+}
+
+
+#la-ciudad {
+
+    background: var(--upso-color);
+
+}
+
+#la-ciudad:hover {
+
+    background-image: url(../redes/plaza-coronel-pringles.jpg);
+    background-position: center;
+   
+} 
+
+
+#horarios {
+
+    background-color: var(--upso-orange)
+
+}
+
+
+
+#horarios:hover {
+
+    background-image: url(../redes/horario.jpg);
+    background-position: center;
+
+}
+
+.main-container_wrapper-articule h2  {
+    
+    font-family: "Roboto",Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: #fafafa; 
+    font-size: 3vw; 
+    z-index: 2; 
+
+}
+
+
+
+.main-container_wrapper-second-articule{
+    
+    display: flex;
+    background-color:var(--upso-blue);
+    height: 300px;
+    position: relative; 
+    width: 65%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.main-container_wrapper-second-articule::before{
+    
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--upso-blue); 
+    z-index: 1; 
+    transition: opacity 0.5s ease; 
+    opacity: 0; 
+
+}
+
+.main-container_wrapper-second-articule:hover::before {
+    
+    opacity: 0.9; 
+    
+}
+
+
+
+#carreras:hover {
+    
+    background-image: url(../redes/header-carreras.png);
+    
+}
+
+.main-container_wrapper-second-articule h2  {
+    
+    font-family: "Roboto",Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: #fafafa; 
+    font-size: 3vw;
+    z-index: 2; 
+
+
+}
+
+
+
+/*---sin uso--*/
+.main-container_separator {
+    
+    display: flex;
+    box-sizing: border-box;
+    height: 15vh;
+   
+
+}
+
+
+/*-----------------Clases de los articulos de la pagina de inicio -------------------------------------------------------------*/ 
+
+/*----------------------------------------------------Slider (v5)---------------------------------------------------------------------------*/
+
+.slider{
+    
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.contenedor{
+    
+    display: grid;
+    width: 100%;
+    grid-template-columns: 100% 100% 100% 100%;
+    animation-name: movimiento;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    
+}
+
+#imagen-1, #imagen-2,#imagen-3, #imagen-4{
+    
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#imagen-1{
+
+    background-image: url(../Fotos-Slider/Asamblea-1.jpg);
+}
+
+#imagen-2{
+
+    background-image: url(../redes/logoUpso.jpg);
+}
+#imagen-3{
+
+    background-image: url(../redes/subsede.jpg);
+}
+#imagen-4{
+
+    background-image: url(../redes/sedecentralUPSO.png);
+}
+
+
+.linear{
+   
+    
+    background:linear-gradient(var(--upso-color), var(--upso-blue));
+    
+    height: 500px;
+    width: 100%;
+    opacity: 0.7;
+
+}
+
+.slider-container-h2 {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family:"Roboto",Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.5;
+
+}
+
+@keyframes movimiento {
+    
+    0% {
+        margin-left: 0%;
+    }
+    10%{
+        margin-left: 0%;
+
+    }
+    
+    20% {
+        margin-left: -100%;
+    }
+    30% {
+        margin-left: -100%;
+    }
+    40% {
+        margin-left: -200%;
+    }
+    50% {
+        margin-left: -200%;
+    }
+    60% {
+        margin-left: -300%;
+    }
+    70% {
+        margin-left: -300%;
+    }
+    85%{
+
+        argin-left: -400%;
+    }
+    
+    100% {
+        margin-left: 0%;
+    }
+}
+
+
+@media screen and (max-width:750px) {
+
+    .slider-container-h2{
+
+        font-size: 1em;
+    }
+    
+}
+/*---------------------------------------------------------- Footer----------------------------------------------------------------- */
+
+.footer{
+   
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    border-top:2px solid black;
+    clear: left;
+    background-color: #e4e1e1de;
+    flex-wrap: wrap;
+    
+}
+
+.redes{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+
+}
+
+.redes .net img {
+    
+    filter: grayscale(100%); 
+    transition: filter 0.3s; 
+
+}
+
+.redes .net:hover img {
+    
+    filter: grayscale(0%);
+
+}
+
+.redes-logos{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.redes h2  {
+    
+    color: rgb(118, 115, 115); 
+
+}
+
+.net{
+    
+    height: 40px;
+    width: 4cap;
+    margin: 10px;
+
+}
+
+.redes article {
+
+    margin-left: 10px;
+
+}
+
+.net img{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.section-address{
+    
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 50px;
+    align-items: center;
+   
+}
+
+.section-address p{
+
+    font-size: 70%;
+
+}
+
+
+@media screen and (max-width :380px){
+
+    .redes-logos{
+
+        flex-direction: column;
+        height: 300px;
+    
+    }
+
+
+}
+
+@media screen and (max-width :200px){    
+
+    .archivo-black-regular {
+
+        display: none;
+    }
+
+}
+
+/*------------------ Fin de Footer------------------------------- */
+
+
+
+
+
+ 
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
